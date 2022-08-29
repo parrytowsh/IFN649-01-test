@@ -36,13 +36,8 @@ void loop() {
     float hif = dht.computeHeatIndex(f, h);
     float hic = dht.computeHeatIndex(t, h, false); 
 
-//    int i;
+    
     float allData[5] = {h,t,f,hif,hic};
-
-//    for(i=0; i<5; i++){
- //     Serial.println(allData[i]);
-//      Serial1.println(allData[i]);
-//    }
 
       Serial.print(allData[0]);
       Serial1.print(allData[0]);
@@ -62,34 +57,6 @@ void loop() {
       Serial1.print(",");
       Serial.println(allData[4]);
       Serial1.println(allData[4]);
-
-    
-
-//    Serial.println(allData);
-//    Serial1.println(allData);
-//    Serial.print(F("{Humidity_%:"));
-//    Serial.print(h);
-//    Serial.print(F(",Temperature_C:"));
-//    Serial.print(t);
-//    Serial.print(F(",Temperature_F:"));
-//    Serial.print(f);
-//    Serial.print(F(",Heat_index_C:"));
-//    Serial.print(hic);
-//    Serial.print(F(",Heat_index_F:"));
-//    Serial.print(hif);
-//    Serial.println(F("}"));
-
-//    Serial1.print(F("{Humidity_%:"));
-//    Serial1.print(h);
-//    Serial1.print(F(",Temperature_C:"));
-//    Serial1.print(t);
-//    Serial1.print(F(",Temperature_F:"));
-//    Serial1.print(f);
-//    Serial1.print(F(",Heat_index_C:"));
- //   Serial1.print(hic);
-//    Serial1.print(F(",Heat_index_F:"));
-//    Serial1.print(hif);
-//    Serial1.println(F("}"));
     
     delay(1000);
     digitalWrite(LEDPIN, LOW);
